@@ -12,7 +12,7 @@ void dfs(int u) {
     }
 }
 
-void fun(int n, vector<vector<int>> g) { 
+void traverseDfs(int n, vector<vector<int>> g) { 
     vector<bool> visited(n, false);
     dfs(0);
 }

@@ -35,7 +35,7 @@ vector<int> reconstructPath(int s, int e, vector<int> &prev) {
     return {};
 }
 
-vector<int> fun(int s, int e) {
+vector<int> traverseBfs(int s, int e) {
     vector<int> prev = bfs(s);
     return reconstructPath(s, e, prev);
 }

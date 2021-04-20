@@ -36,7 +36,7 @@ void explore_neighbours(int r, int c) {
     }
 }
 
-int fun() {
+int bfsShortestPath() {
     rq.push(sr); cq.push(sc);
     visited[sr][sc] = true;
     while(!rq.isEmpty()) {

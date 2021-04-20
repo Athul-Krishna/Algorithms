@@ -11,7 +11,7 @@ int dfs(int n, int u, vector<bool> &visited, vector<int> &result, vector<vector<
     return n-1;
 }
 
-vector<int> fun(vector<vector<int>> &graph) {
+vector<int> topologicalSort(vector<vector<int>> &graph) {
     N = graph.size();
     vector<bool> visited(N, false);
     vector<int> result(N, 0);
