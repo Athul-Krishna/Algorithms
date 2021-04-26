@@ -29,7 +29,7 @@ vector<int> topologicalSort(vector<vector<int>> &graph) {
 // graph is the adjacency list where graph[0] = { pair<to, weight>, pair<to, weight>, ... }
 vector<int> dagShortestPath(vector<vector<int>> &graph, int start, int numNodes) {
     vector<int> topsort = topologicalSort(graph);
-    vector<int> dist(n, INT_MAX);
+    vector<int> dist(numNodes, INT_MAX);
     dist[start] = 0;
 
     for(int i=0; i<numNodes; i++) {
@@ -37,8 +37,8 @@ vector<int> dagShortestPath(vector<vector<int>> &graph, int start, int numNodes)
         if(dist[nodeIndex] != NULL) {
             for(auto next : graph[nodeIndex]) {
                 int newDist = dist[nodeIndex] + next[1]];
-                if(dist[next[0]] == null) dist[next[0]] = newDist;
-                else dist[next[0]] = min(dist[next[0]], newDist);
+                if(dist[next[0]] == NULL) dist[next[0]] = newDist;
+                else dist[next[0]] = min(dist[next[0]], newDist);d
             }
         }
     }
